@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 use App\Maker;
 
+use App\Http\Requests\CreateMakerRequest;
+
 class MakerController extends Controller
 {
     /**
@@ -27,12 +29,16 @@ class MakerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \App\Http\Controllers\CreateMakerRequest|\App\Http\Requests\CreateMakerRequest|\Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateMakerRequest $request)
     {
-        //
+        $values = $request->only(['name', 'phone']);
+
+        Maker::create($values);
+
+        return response()->json(['message' => 'Makers correctly added'], 201);
     }
 
     /**
