@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Maker;
 use App\Vehicle;
 
+use App\Http\Requests\CreateVehicleRequest;
+
 
 class MakerVehiclesController extends Controller
 {
@@ -34,12 +36,24 @@ class MakerVehiclesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \App\Http\Requests\CreateVehicleRequest|\Illuminate\Http\Request $request
+     * @param $makerId
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateVehicleRequest $request, $makerId)
     {
-        //
+        $maker = Maker::find($makerId);
+
+        if (!$makerId)
+        {
+            return response()->json(['message' => 'This maker does not exist', 'code' => 404], 404);
+        }
+
+        $values = $request->all();
+
+        $maker->vehicles()->create($values);
+
+        return response()->json(['message' => 'The vehicle associated was created', 201], 201);
     }
 
     /**
@@ -64,6 +78,7 @@ class MakerVehiclesController extends Controller
         {
             return response()->json(['message' => 'This vehicle does not exist for this maker', 'code' => 404], 404);
         }
+
         return response()->json(['data' => $vehicle], 200);
     }
 
