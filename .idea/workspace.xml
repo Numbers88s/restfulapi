@@ -63,9 +63,11 @@
       <file leaf-file-name="MakerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5" vertical-offset="765" max-vertical-offset="1485">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="87" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="-1.5416666" vertical-offset="1313" max-vertical-offset="1845">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="115" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,8 +127,8 @@
       <file leaf-file-name="MakerVehiclesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerVehiclesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37969926" vertical-offset="1148" max-vertical-offset="2130">
-              <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.7462406" vertical-offset="1838" max-vertical-offset="2370">
+              <caret line="149" column="58" selection-start-line="149" selection-start-column="58" selection-end-line="149" selection-end-column="58" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -925,16 +927,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="765" max-vertical-offset="1485">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="87" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="-1.5416666" vertical-offset="1313" max-vertical-offset="1845">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="115" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MakerVehiclesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37969926" vertical-offset="1148" max-vertical-offset="2130">
-          <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.7462406" vertical-offset="1838" max-vertical-offset="2370">
+          <caret line="149" column="58" selection-start-line="149" selection-start-column="58" selection-end-line="149" selection-end-column="58" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
