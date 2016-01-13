@@ -11,6 +11,7 @@ use App\Maker;
 use App\Vehicle;
 
 use App\Http\Requests\CreateMakerRequest;
+use Illuminate\Support\Facades\Cache;
 
 class MakerController extends Controller
 {
@@ -27,7 +28,10 @@ class MakerController extends Controller
      */
     public function index()
     {
-        $makers = Maker::all();
+        $makers = Cache::remember('makers', 15/60, function()
+        {
+            return Maker::all();
+        });
 
         return response()->json(['data' => $makers], 200);
     }
