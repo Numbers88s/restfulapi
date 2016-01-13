@@ -15,6 +15,11 @@ use App\Http\Requests\CreateVehicleRequest;
 
 class MakerVehiclesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth.basic', ['except' => ['index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -126,7 +131,8 @@ class MakerVehiclesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param $makerId
+     * @param $vehicleId
      * @return \Illuminate\Http\Response
      */
     public function destroy($makerId, $vehicleId)
